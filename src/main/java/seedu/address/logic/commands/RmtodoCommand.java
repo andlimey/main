@@ -53,7 +53,10 @@ public class RmtodoCommand extends Command {
 
         Person personTarget = lastShownList.get(personIndex.getZeroBased());
         Set<Subject> removedSubjectContent = removeSubjectContentFrom(personTarget);
-        Person personSubjUpdated = createUpdatedPersonForRmtodo(personTarget, removedSubjectContent);
+
+        Person personSubjUpdated = new Person(personTarget.getName(), personTarget.getPhone(),
+                personTarget.getEmail(), personTarget.getAddress(), removedSubjectContent,
+                personTarget.getTuitionTiming(), personTarget.getTags());
 
         model.updatePerson(personTarget, personSubjUpdated);
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
@@ -62,25 +65,13 @@ public class RmtodoCommand extends Command {
     }
 
     /**
-     * Creates and returns a {@code Person} with the details of {@code personTarget}
-     * with the updated {@code Set<Subject> newSubject}.
-     * @param personTarget the person to be updated
-     * @param newSubject the updated subjects
-     * @return a new {@code Person} with updated subjects
-     */
-    private Person createUpdatedPersonForRmtodo(Person personTarget, Set<Subject> newSubject) {
-        return new Person(personTarget.getName(), personTarget.getPhone(),
-                personTarget.getEmail(), personTarget.getAddress(), newSubject,
-                personTarget.getTuitionTiming(), personTarget.getTags());
-    }
-
-    /**
      * Removes syllabus from the person specified
      * @param personTarget the person to remove from
      * @return a new {@code Set<Subject>} with the specified syllabus removed
      * @throws CommandException if the index to remove from is invalid
      */
-    private Set<Subject> removeSubjectContentFrom(Person personTarget) throws CommandException {
+    private Set<Subject> removeSubjectContentFrom(Person personTarget)
+        throws CommandException {
         List<Subject> subjects = personTarget.getSubjects().stream().collect(Collectors.toList());
 
         if (hasExceededNumberOfSubjects(subjects)

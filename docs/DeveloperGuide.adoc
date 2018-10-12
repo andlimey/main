@@ -22,87 +22,52 @@ Current: +
 * `Tutors use reminder applications to keep track of lessons`
 * `Tutors use physical diaries or notepads to keep track of current lesson progress`
 
-Value:
+Value: 
 
-* `Tutors have a platform where they can keep track of all their students' details, their progress and the syllabus they intend to cover.`
+* `Tutors have a platform where they can keep track of all their student’s details, +
+their progress and the syllabus they intend to cover.`
 
 == User Stories
-
-. As a busy tutor, I want to be able to manage my students' schedules individually, so that I can plan my time properly.
-. As a tutor, I want to be able to find out where my students live and what time I should be there for tuition.
-. As a tutor, I want to know my students' individual progress so that I know what topics I need to cover for the next tuition session.
-. As a tutor, I want to keep track of my students' payments.
+. For private tutors to manage individual students’ schedule. 
+  As a tutor, I want to be able to know where my students live, what time their tuition is, their individual syllabus progress, and my weekly schedule.
 
 == Use Cases
+ 
+  1. MSS: Add Student
 
-  1. Add Student
-
-  System: TutorHelper
+  Step 1:
   Actor: Tutor
-  MSS:
-    1. Tutor inputs to add a student and his/her details.
-    2. System adds student details into the database.
-    Use case ends.
-  Extensions:
-    2a. Index is out of bounds
-      2a1. System displays error message.
+  Action: Type command 'add' or 'a' followed by Student details on the CLI bar
+  Step 2a:
+  Input is valid and student details added into the database
+  Step 2b:
+  Input is invalid and error message displayed
+  
+  2. MSS: Edit Student
 
-  2. Edit Student
-
-  System: TutorHelper
+  Step 1:
   Actor: Tutor
-  MSS:
-    1. Tutor inputs to edit a student's details.
-    2. System edits student details into the database.
-    Use case ends.
-  Extensions:
-    2a. Index is out of bounds
-      2a1. System displays error message.
+  Action: Type command 'edit' or 'e' followed by the index and the fields to edit
+  Step 2a:
+  Input is valid and student details successfully edited.
+  New student details displayed
+  Step 2b:
+  Input is invalid and error message displayed
 
-  3. Delete Student
-
-  System: TutorHelper
+  3. MSS: Delete Student
+  
+  Step 1:
   Actor: Tutor
-  MSS:
-    1. Tutor inputs student's index to delete.
-    2. System deletes student details from the database.
-    Use case ends.
-  Extensions:
-    2a. Index is out of bounds
-      2a1. System displays error message.
+  Action: Type command 'delete' or 'd' followed by the index to delete
+  Step 2:
+  Student corresponding to the index is removed from TutorHelper
 
-  4. List Students
-
-  System: TutorHelper
-  Actor: Tutor
-  MSS:
-    1. Tutor requests to list students.
-    2. System displays current list of students.
-    Use case ends.
-
-  5. Group Students
-
-  System: TutorHelper
-  Actor: Tutor
-  Precondition: Current list of students is not empty.
-  MSS:
-    1. Tutor requests to group students by day or timing.
-    2. System filters the current list of students based on the timing entered.
-    3. System sorts the filtered list of students in order of timing.
-    4. System displays filtered and sorted list to Tutor.
-    Use case ends.
-  Extensions:
-    2a. Input is invalid
-      2a1. System displays examples of valid input to Tutor.
-    2b. Tutor does not input a day or timing
-      2b1. System retrieves current date.
-      2b2. System filters out students with tuition before current date.
-      2b3. Resume from step 3.
 
 == Non-Functional Requirements
 
-. The system should respond in two seconds.
-. The system should be understandable to a novice in working with computers.
+. Display a list of upcoming sessions with students
+. Must be fast in displaying results
+. Can view own timetable
 
 == Glossary
-. Syllabus: the topics of a particular subject in a course of study or teaching.
+. Syllabus: the subjects in a course of study or teaching.

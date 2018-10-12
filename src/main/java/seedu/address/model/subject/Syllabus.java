@@ -19,7 +19,6 @@ public class Syllabus {
     public static final String SYLLABUS_VALIDATION_REGEX = "[^\\s].*";
 
     public final String syllabus;
-
     public final boolean state;
 
     /**
@@ -51,8 +50,7 @@ public class Syllabus {
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof Syllabus // instanceof handles nulls
-                && syllabus.equals(((Syllabus) other).syllabus)
-                && state == ((Syllabus) other).state); // state check
+                && syllabus.equals(((Syllabus) other).syllabus)); // state check
     }
 
     @Override
