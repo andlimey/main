@@ -1,17 +1,13 @@
 package seedu.address.logic.parser;
 
+import java.util.stream.Stream;
+import seedu.address.logic.commands.EarningsCommand;
+import seedu.address.logic.parser.exceptions.ParseException;
+
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PAYMENT_MONTH;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PAYMENT_YEAR;
 
-import java.util.stream.Stream;
-
-import seedu.address.logic.commands.EarningsCommand;
-import seedu.address.logic.parser.exceptions.ParseException;
-
-/**
- * Parses input arguments and creates a new EarningsCommand object
- */
 public class EarningsCommandParser implements Parser<EarningsCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the AddCommand

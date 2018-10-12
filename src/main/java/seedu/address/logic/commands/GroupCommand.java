@@ -18,7 +18,7 @@ public class GroupCommand extends Command {
             + "The input can also be null and the students will be grouped according to the current day and time.\n"
             + "Parameters: KEYWORD\n"
             + "Examples: " + COMMAND_WORD + "Monday\n"
-            + COMMAND_WORD + "12:00pm";
+            + COMMAND_WORD+ "12:00pm";
 
     public static final String MESSAGE_SUCCESS = "Grouped all students";
 
@@ -33,7 +33,7 @@ public class GroupCommand extends Command {
         requireNonNull(model);
         model.updateFilteredPersonList(predicate);
         return new CommandResult(
-                String.format(Messages.MESSAGE_PERSONS_LISTED_OVERVIEW, model.getFilteredPersonList().size())
+                String.format(Messages.MESSAGE_PERSONS_LISTED_OVERVIEW, model.getFilteredPersonList(). size())
         );
     }
 }
