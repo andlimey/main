@@ -9,7 +9,17 @@
 
 == Overview
 
-It is a Java sample application intended for Tutors who would like to organise their students' information.
+TutorHelper is a desktop administration application intended for Tutors who would like to organise their students' information. TutorHelper uses CLI(command-line interface) as its main form of inputs: where tutors issues commands in the form of successive line of text. Having multiple students at once can be a hassle to deal with, especially with each student having his own curriculum, tuition timing, and payments. Our team of five decided to create TutorHelper by building upon the existing AddressBook Level 4 application. TutorHelper offers an easy way to keep track of the tutor schedule and keep tabs on the students, allowing him to efficiently plan ahead.
+
+Some of the new main features include : +
+Grouping +
+Payment +
+Earnings +
+Add/Edit/Delete/Mark Syllabus +
+Add/Delete/Copy subject
+
+This project portfolio consists of the contributions I have made to TutorHelper.
+
 == Summary of contributions
 
 * *Major enhancement*: added *the ability to edit existing syllabus entries*

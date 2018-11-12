@@ -4,12 +4,21 @@
 :stylesDir: ../stylesheets
 
 == PROJECT: TutorHelper
-
----
+By CS2103 W13-4
 
 == Overview
 
-It is a Java sample application intended for Tutors who would like to organise their students' information.
+TutorHelper is a desktop administration application intended for Tutors who would like to organise
+their students' information. TutorHelper uses CLI(command-line interface) as its main form of
+inputs: where tutors issues commands in the form of successive line of text. Having multiple
+students at once can be a hassle to deal with, especially with each student having his own
+curriculum, tuition timing, and payments. Our team of five decided to create TutorHelper by
+building upon the existing AddressBook Level 4 application. TutorHelper offers an easy way to
+keep track of the tutor schedule and keep tabs on the students, allowing him to efficiently plan
+ahead. Some of the new main features include : grouping, payment, earnings, add/edit/delete/mark
+syllabus, and add/delete/copy subject.
+
+This project portfolio consists of the contributions I have made to TutorHelper.
 
 == Summary of contributions
 
@@ -31,7 +40,13 @@ allow users to easily manage the subjects.
 ** Data writing into storage of subject and its syllabus (Pull request https://github.com/CS2103-AY1819S1-W13-4/main/pull/46[#46])
 ** Re-implementation of BrowserPanel into its current fxml implementation (Pull request https://github.com/CS2103-AY1819S1-W13-4/main/pull/226[#226])
 
-* *Code contributed*: https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&search=susterdrifter
+* *Code contributed*: +
++
+|===
+|_The following
+link:https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&search=susterdrifter[link] contains the summary of my code contribution to the project._
+|===
+
 * *Other contributions*:
 
 ** Project management:

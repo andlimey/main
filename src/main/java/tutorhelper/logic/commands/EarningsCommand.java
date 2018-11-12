@@ -5,7 +5,6 @@ import static java.util.Objects.requireNonNull;
 import java.util.List;
 
 import tutorhelper.logic.CommandHistory;
-import tutorhelper.logic.commands.exceptions.CommandException;
 import tutorhelper.model.Model;
 import tutorhelper.model.student.Payment;
 import tutorhelper.model.student.Student;
